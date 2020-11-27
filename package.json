@@ -1,0 +1,14 @@
+{
+  "name": "security",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "save": "npm run encrypt && git add . && git commit -m 'update' && git push",
+    "encrypt": "gpg --recipient 9D54203BE46A1CD4 --encrypt Sarigama.kdbx > Sarigama.kdbx.gpg",
+    "postencrypt": "rm Sarigama.kdbx",
+    "decrypt": "gpg -d Sarigama.kdbx.gpg > Sarigama.kdbx"
+  },
+  "author": "Lily Bucher <lily@lucidogen.io>"
+}
