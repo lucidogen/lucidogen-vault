@@ -1,17 +1,15 @@
 {
-  "name": "security",
+  "name": "lucidogen-vault",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "private": true,
   "scripts": {
     "save": "npm run encrypt && git add . && git commit -m 'update' && git push",
-    "import-key": "npm run import-public && npm run import-private",
-    "import-public": "gpg --import /Volumes/SarigamaKey/public.pgp",
-    "import-private": "gpg --import /Volumes/SarigamaKey/private.pgp",
-    "encrypt": "gpg --recipient 9D54203BE46A1CD4 --encrypt Sarigama.kdbx > Sarigama.kdbx.pgp",
-    "postencrypt": "rm Sarigama.kdbx",
-    "decrypt": "gpg -d Sarigama.kdbx.pgp > Sarigama.kdbx"
+    "recover": "bash ./recover.sh",
+    "encrypt": "gpg --recipient 5C04328CDD4470B0 --encrypt Lucidogen.kdbx > Lucidogen.kdbx.gpg",
+    "postencrypt": "rm Lucidogen.kdbx",
+    "decrypt": "gpg -d Lucidogen.kdbx.gpg > Lucidogen.kdbx"
   },
   "author": "Lily Bucher <lily@lucidogen.io>"
 }
