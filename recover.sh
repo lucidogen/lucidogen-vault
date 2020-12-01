@@ -3,7 +3,7 @@
 set -e
 set -v
 
-$KEYID="5C04328CDD4470B0"
+KEYID="5C04328CDD4470B0"
 echo "Recover '$KEYID' from exported keys."
 
 # Install gpg
