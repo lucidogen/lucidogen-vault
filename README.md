@@ -1,4 +1,4 @@
-# sarigama-vault
+# lucidogen-vault
 
 ( ͡° ͜ʖ ͡°)
 
